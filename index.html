@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="script.js"></script>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgb(77, 130, 245); 
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Calculadora{
+    background-color: rgba(38, 55, 204, 0.596);
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.botoes{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.Button{
+    padding: 15px;
+    background-color: rgb(83, 177, 240);
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: rgb(0, 0, 0) outset;
+}
+input{
+    width: 295px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.Button:hover{
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+}
+.duplo{
+    grid-column: span 2;
+}
+footer{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 19px;
+    background-color: rgba(253, 253, 253, 0.596);
+    height: 190px !important;
+    width: 190px;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="Calculadora">
+        <h1>Calculadora</h1>
+        <input type="text" id="display" disabled>
+        <div class="botoes">
+            <button class="Button duplo" onclick="limparDisplay()">C</button>
+            <button class="Button" onclick="apagar()">DEL</button>
+            <button class="Button"  onclick="operador('/')">/</button>
+
+            <button class="Button">7</button>            
+            <button class="Button">8</button>            
+            <button class="Button">9</button>            
+            <button class="Button">x</button>
+
+            <button class="Button">4</button>            
+            <button class="Button">5</button>            
+            <button class="Button">6</button>            
+            <button class="Button">-</button> 
+
+            <button class="Button">1</button>            
+            <button class="Button">2</button>            
+            <button class="Button">3</button>            
+            <button class="Button">+</button>
+
+            <button class="Button duplo">0</button>            
+            <button class="Button">.</button>            
+            <button class="Button">=</button>            
+            
+        </div>
+        
+    </div>
+    <footer>Paulo Barilka - 2B</footer>
+</body>
+</html>
